@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<main>
+		<div class="form-wrapper">
+			<form class="authentication">
+				<div class="form-row">
+					<div class="form-col">
+						<div class="input-box">
+							<label for="">Name</label>
+							<input type="text" name="username" placeholder="Nguyen Lam Hoang">
+							<p class="message"></p>
+						</div>
+						<div class="input-box">
+							<label for="">Phone number</label>
+							<input type="number" name="phoneNumber" placeholder="0708063423">
+							<p class="message"></p>
+						</div>
+					</div>
+				</div>
+				<div class="input-box">
+					<label for="">Email address</label>
+					<input type="text" name="email" placeholder="aztenderio7146@gmail.com">
+					<p class="message"></p>
+				</div>
+				<div class="input-box">
+					<label for="">From the scale below, please share your experience</label>
+					<div class="form-icons">
+						<div class="form-icon">😤
+							<span>Worst</span>
+						</div>
+						<div class="form-icon">😒
+							<span>Not good</span>
+						</div>
+						<div class="form-icon active">😐
+							<span>Fine</span>
+						</div>
+						<div class="form-icon">😊
+							<span>Look Good</span>
+						</div>
+						<div class="form-icon">😍
+							<span>Very good</span>
+						</div>
+					</div>
+					<input type="range" value="50" min="0" max="100" maxlength="100" name="icons" id="">
+				</div>
+				<div class="input-box">
+					<textarea name="" id="" placeholder="Type your thoughts...">
+
+					</textarea>
+				</div>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</main>
+	<script src="./script.js"></script>
+</body>
+
+</html>

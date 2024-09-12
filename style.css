@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 62.5%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+	--Light-Sea-Green-Main: #20B2AA;
+	--Green-Blue-Main: #2071B2;
+	--Dark-Sea-Green-Other: #105955;
+	--Crystal-Other: #A5E0DD;
+	--Black: #000;
+	--Tinted-Black: #222;
+	--Dark-Gray: #555;
+	--Medium-Gray: #777;
+	--White: #fff;
+}
+
+main {
+	height: 100vh;
+	background: linear-gradient(to bottom, #B1DFFE, #E7EFE4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .form-wrapper {
+	width: 534px;
+	background-color: var(--White);
+	border-radius: 8px;
+	box-shadow: 0 2px 12px rgb(224, 221, 221);
+	padding: 30px;
+}
+
+.input-box {
+	width: 100%;
+	margin: 20px 0 10px;
+}
+
+input {
+	width: 100%;
+	height: 40px;
+	padding: 0 15px 0 5px;
+	font-size: 1.6rem;
+	outline: none;
+	border-radius: 4px;
+	border: 2px solid var(--Medium-Gray);
+	box-shadow: 0 0 5px rgb(214, 213, 213);
+}
+
+.form-col {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 20px;
+}
+
+label {
+	display: block;
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+	font-weight: 600;
+	color: var(--Green-Blue-Main);
+}
+
+textarea {
+	width: 100%;
+	height: 100px;
+	padding: 10px;
+	font-size: 1.6rem;
+	outline: none;
+	border-radius: 4px;
+	border: 2px solid gray;
+	box-shadow: 0 0 5px rgb(214, 213, 213);
+}
+
+input[type='range'] {
+	box-shadow: unset;
+	accent-color: var(--Dark-Sea-Green-Other);
+	cursor: pointer;
+}
+
+input[type='submit'] {
+	height: 50px;
+	font-size: 1.8rem;
+	color: white;
+	border: none;
+	outline: none;
+	font-weight: 600;
+	background-color: var(--Light-Sea-Green-Main);
+	cursor: pointer;
+	transition: .1s ease-in-out;
+
+	&:hover {
+		background-color: var(--Dark-Sea-Green-Other);
+	}
+}
+
+.input-box.error .message {
+	font-size: 1.6rem;
+	margin-top: 10px;
+	color: rgb(244, 98, 98);
+	font-style: italic;
+}
+.form-icons{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.form-icons .form-icon{
+	font-size: 2.5rem;
+}
+.form-icons .form-icon{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	filter: grayscale(80%);
+}
+.form-icons .form-icon.active{
+	filter: grayscale(0%);
+}
+.form-icons .form-icon span{
+	font-size: 1.4rem;
+	margin-top: 5px;
+	color: #105955;
+	font-weight: 600;
+}
+@media (max-width:580px) {
+	.form-col {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		column-gap: 20px;
+	}
+}
